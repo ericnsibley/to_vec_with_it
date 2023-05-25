@@ -1,0 +1,45 @@
+{
+    "classes": [
+        {
+            "class": "Article",
+            "description": "A research paper yoinked from the public arXiv API",
+            "properties": [
+                {
+                    "name": "title",
+                    "description": "Title of the article",
+                    "dataType": [
+                        "text"
+                    ]
+                },
+                {
+                    "name": "authors",
+                    "description": "Author(s) of the article",
+                    "dataType": [
+                        "text[]"
+                    ]
+                },
+                {
+                    "name": "date_published",
+                    "description": "Date the article was published",
+                    "dataType": [
+                        "date"
+                    ]
+                },
+                {
+                    "name": "summary",
+                    "description": "Summary of the article",
+                    "dataType": [
+                        "text"
+                    ]
+                },
+                {
+                    "name": "pdf_url",
+                    "description": "URL of the article",
+                    "dataType": [
+                        "text"
+                    ]
+                }
+            ]
+        }
+    ]
+}

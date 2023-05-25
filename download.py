@@ -30,7 +30,7 @@ def parse_arxiv_response(response: str) -> list[dict]:
     results = []
     for entry in root.findall("{http://www.w3.org/2005/Atom}entry"):
         result = {}
-        result["title"] = entry.find("{http://www.w3.org/2005/Atom}title").text
+        result["title"] = entry.find("{http://www.w3.org/2005/Atom}title").text.strip().replace('\n', ' ')
         result["authors"] = [author.find("{http://www.w3.org/2005/Atom}name").text for author in entry.findall("{http://www.w3.org/2005/Atom}author")]
         result["date_published"] = entry.find("{http://www.w3.org/2005/Atom}published").text
         result["summary"] = entry.find("{http://www.w3.org/2005/Atom}summary").text.strip().replace('\n', ' ')

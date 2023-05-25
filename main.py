@@ -15,7 +15,7 @@ def create_schema_from_file(client, file: str) -> None:
 
 
 def upload_to_db(client, topic: str) -> None:
-    article_data = download.download_articles_related_to(topic, 2)
+    article_data = download.download_articles_related_to(topic, 10)
 
     with client.batch as batch: 
         batch.batch_size = 100
